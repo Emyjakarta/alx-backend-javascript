@@ -18,6 +18,16 @@ module.exports = {
   },
   plugins: ['jest'],
   rules: {
+    // "import/extensions": ["error", "always", { "js": "never", "json": "always" }],
+    "import/extensions": [
+    "error",
+    "ignorePackages",
+    {
+      "js": "never",
+      "mjs": "never",
+      "jsx": "never"
+    }
+    ],
     'max-classes-per-file': 'off',
     'no-underscore-dangle': 'off',
     'no-console': 'off',
